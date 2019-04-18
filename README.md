@@ -131,7 +131,7 @@ No change
 
 #### Node versions
 
-So far, I have tried the folowing nodejs versions: node:8-alpine, node:10-alpine, node:10
+So far, I have tried the following nodejs versions: node:8-alpine, node:10-alpine, node:10
 No change
 
 ### Stacktrace / full error message
