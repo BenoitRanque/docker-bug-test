@@ -1,0 +1,17 @@
+version: '3.6'
+services:
+  docker-application:
+    build:
+      context: ./docker-application
+      args:
+        NODE_ENV: development
+    restart: always
+    # using legacy nodemon option to detect filesystem events
+    command: [ "nodemon", "-L" ]
+    # this does not work either
+    # command: [ "node", "src/index.js" ]
+    environment:
+      NODE_ENV: development
+    # this mount seems to be the origin of the problem
+    volumes:
+      - ./docker-application/src:/usr/app/src:ro
